@@ -1,0 +1,19 @@
+<?php
+
+$host="localhost";
+$user="root";
+$password="";
+$database="dbmahasiswa";
+
+$koneksi=mysqli_connect($host, $user, $password);
+if ($koneksi){
+	$buka=mysqli_select_db($koneksi,$database);
+	echo "database dapat terhubung";
+	if (!$buka){
+		echo "database tidak dapat terhubung";
+	}
+}else{
+	echo "MySQL tidak dapat Terhubung";
+}
+
+?>
